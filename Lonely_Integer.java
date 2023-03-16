@@ -38,7 +38,7 @@ public class Lonely_Integer {
             // a.sort(Comparator.naturalOrder());
             
             
-            // System.out.print(length);
+            // Syste .out.print(length);
             // for (int i = 0; i < length; i++){
         
                 

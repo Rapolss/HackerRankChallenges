@@ -1,0 +1,36 @@
+class Result {
+
+    /*
+     * Complete the 'dayOfProgrammer' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts INTEGER year as parameter.
+     */
+
+    public static String dayOfProgrammer(int year) {
+    // Write your code here
+    
+    int day = 0;
+    if(year > 1918){// conditions for gregorian calendar
+        if(((year%4==0) && (year%100 != 0)) || year%400 == 0){
+            day = 12;
+        } else {
+            day = 13;
+        }
+    } else if (year < 1918){ // conditions for julian calendar
+         if(year%4 == 0){
+            day = 12;
+        } else {
+            day = 13;
+        }
+    } else{ //transition from julian to gregorian
+        day = 26;
+    }
+    
+    String date = day+".09."+year;
+    
+    return date;
+
+    }
+
+}
